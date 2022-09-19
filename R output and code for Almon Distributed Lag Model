@@ -1,0 +1,101 @@
+#This is the code used to run Almon Distribted Lag Model
+# The matrix_df component is the dataframe that contains all data from the 72 independent and 1 dependent variable 
+#The regression is ran
+#library(dLagM)
+Almon <- dlm(formula = CPI ~ real_salary_increase+ln_gas+ln_oil+ln_sofix+ln_sp500+unemploy+normal_salary+difference_FD+PPI+log_spend+ln_usd_bgn+difference_GDP,
+data = matrix_df, q = 6, remove=removed)
+# The output is shown below
+#
+Call:
+lm(formula = as.formula(model.formula), data = design)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.046933 -0.012398 -0.001179  0.011441  0.046800 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            -1.377e-02  1.746e-02  -0.789 0.433576    
+real_salary_increase.1  4.705e-01  3.963e-01   1.187 0.240368    
+real_salary_increase.2 -9.885e-01  5.294e-01  -1.867 0.067410 .  
+real_salary_increase.3  8.355e-01  6.760e-01   1.236 0.221912    
+real_salary_increase.4  4.409e-02  6.231e-01   0.071 0.943857    
+real_salary_increase.5  8.778e-01  5.950e-01   1.475 0.146084    
+real_salary_increase.6 -1.178e+00  5.246e-01  -2.245 0.028948 *  
+ln_gas.1               -1.455e-02  3.586e-02  -0.406 0.686505    
+ln_gas.2                7.978e-03  3.505e-02   0.228 0.820839    
+ln_gas.3               -4.589e-02  3.338e-02  -1.375 0.174956    
+ln_gas.4               -1.290e-01  3.548e-02  -3.635 0.000629 ***
+ln_gas.5               -9.896e-02  3.721e-02  -2.660 0.010327 *  
+ln_gas.6               -4.427e-02  3.580e-02  -1.237 0.221692    
+ln_oil.1               -1.145e-02  5.008e-02  -0.229 0.820051    
+ln_oil.2               -1.516e-01  5.613e-02  -2.702 0.009246 ** 
+ln_oil.3               -1.036e-01  5.619e-02  -1.844 0.070841 .  
+ln_oil.4               -6.590e-02  5.294e-02  -1.245 0.218683    
+ln_oil.5                1.925e-02  5.109e-02   0.377 0.707856    
+ln_oil.6                2.158e-02  5.106e-02   0.423 0.674277    
+ln_sofix.1              1.960e-03  9.497e-02   0.021 0.983610    
+ln_sofix.2              8.352e-02  9.063e-02   0.922 0.360900    
+ln_sofix.3              1.434e-01  9.329e-02   1.537 0.130122    
+ln_sofix.4              2.547e-01  8.634e-02   2.950 0.004726 ** 
+ln_sofix.5              2.528e-01  8.962e-02   2.820 0.006735 ** 
+ln_sofix.6             -2.574e-02  9.796e-02  -0.263 0.793728    
+ln_sp500.1             -1.152e-01  1.918e-01  -0.600 0.550769    
+ln_sp500.2             -3.150e-01  1.893e-01  -1.664 0.102038    
+ln_sp500.3             -5.239e-01  1.776e-01  -2.951 0.004712 ** 
+ln_sp500.4             -5.574e-01  1.761e-01  -3.165 0.002569 ** 
+ln_sp500.5             -3.775e-01  1.711e-01  -2.207 0.031676 *  
+ln_sp500.6              1.422e-01  2.030e-01   0.701 0.486657    
+unemploy.1              1.424e+01  8.418e+00   1.692 0.096612 .  
+unemploy.2             -3.849e+01  1.717e+01  -2.242 0.029181 *  
+unemploy.3              2.101e+01  2.016e+01   1.042 0.302097    
+unemploy.4              6.837e+00  1.992e+01   0.343 0.732785    
+unemploy.5             -2.342e+01  1.778e+01  -1.317 0.193371    
+unemploy.6              1.736e+01  9.319e+00   1.863 0.067981 .  
+normal_salary.1        -2.378e+00  2.249e+00  -1.057 0.295107    
+normal_salary.2         4.093e+00  4.097e+00   0.999 0.322301    
+normal_salary.3        -5.230e+00  4.689e+00  -1.116 0.269645    
+normal_salary.4         4.221e+00  4.344e+00   0.972 0.335712    
+normal_salary.5        -7.570e+00  3.959e+00  -1.912 0.061254 .  
+normal_salary.6         1.269e+00  1.995e+00   0.636 0.527550    
+difference_FD.1        -8.019e-05  4.699e-05  -1.707 0.093752 .  
+difference_FD.2         4.400e-05  7.128e-05   0.617 0.539686    
+difference_FD.3         1.285e-05  6.010e-05   0.214 0.831477    
+difference_FD.4        -3.752e-05  6.226e-05  -0.603 0.549316    
+difference_FD.5         7.169e-05  6.581e-05   1.089 0.280917    
+difference_FD.6        -2.615e-05  3.865e-05  -0.677 0.501629    
+PPI.1                  -8.015e+00  2.408e+00  -3.329 0.001592 ** 
+PPI.2                  -3.652e+00  3.104e+00  -1.177 0.244564    
+PPI.3                   1.194e+00  2.907e+00   0.411 0.682844    
+PPI.4                  -8.626e+00  3.000e+00  -2.875 0.005803 ** 
+PPI.5                  -3.048e+00  2.725e+00  -1.119 0.268331    
+PPI.6                   2.074e+00  2.323e+00   0.893 0.375950    
+log_spend.1             2.754e+00  2.336e+00   1.179 0.243745    
+log_spend.2            -1.823e+00  3.776e+00  -0.483 0.631165    
+log_spend.3            -5.643e-01  4.310e+00  -0.131 0.896338    
+log_spend.4             4.395e+00  4.372e+00   1.005 0.319310    
+log_spend.5            -1.157e+00  3.927e+00  -0.294 0.769527    
+log_spend.6            -2.108e-01  1.858e+00  -0.113 0.910084    
+ln_usd_bgn.1           -2.613e-01  1.796e-01  -1.454 0.151750    
+ln_usd_bgn.2           -3.148e-01  1.884e-01  -1.670 0.100745    
+ln_usd_bgn.3            7.836e-02  1.941e-01   0.404 0.688049    
+ln_usd_bgn.4            2.649e-01  2.023e-01   1.309 0.196031    
+ln_usd_bgn.5            4.892e-01  1.896e-01   2.580 0.012679 *  
+ln_usd_bgn.6            1.537e-01  1.770e-01   0.869 0.388841    
+difference_GDP.1       -1.719e+00  3.244e+00  -0.530 0.598337    
+difference_GDP.2        1.585e+00  4.244e+00   0.373 0.710321    
+difference_GDP.3        5.578e+00  3.972e+00   1.404 0.166049    
+difference_GDP.4       -1.067e+00  3.658e+00  -0.292 0.771658    
+difference_GDP.5       -1.806e+00  3.891e+00  -0.464 0.644511    
+difference_GDP.6        2.287e-01  3.130e+00   0.073 0.942022    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.02833 on 53 degrees of freedom
+Multiple R-squared:  0.8448,	Adjusted R-squared:  0.6339 
+F-statistic: 4.005 on 72 and 53 DF,  p-value: 2.389e-07
+
+AIC and BIC values for the model:
+        AIC       BIC
+1 -501.6289 -291.7441
+#
