@@ -1,0 +1,84 @@
+
+# df is the dataframe containing all 72 independent variables and 1 dependent variable used to run Boruta
+library(Boruta)
+boruta <- Boruta(CPI_trend_FD_t~., data = df, doTrace = 2)
+
+# The Boruta output
+
+ #Printing the output for features as important,unimportant or tentative 
+ #Receiving the final list
+ 
+ important$finalDecision
+                     `Real_sal_incr_t-1`                      `Real_sal_incr_t-2` 
+                                Confirmed                               Tentative 
+                     `Real_sal_incr_t-3`                      `Real_sal_incr_t-4` 
+                                Rejected                                Tentative 
+                     `Real_sal_incr_t-5`                      `Real_sal_incr_t-6` 
+                               Confirmed                                 Rejected 
+                            `LN_GAS_t-1`                             `LN_GAS_t-2` 
+                                Rejected                                 Rejected 
+                            `LN_GAS_t-3`                             `LN_GAS_t-4` 
+                                Rejected                                 Rejected 
+                            `LN_GAS_t-5`                             `LN_GAS_t-6` 
+                                Rejected                                 Rejected 
+                      `LN_Brent_OIL_t-1`                       `LN_Brent_OIL_t-2` 
+                                Rejected                                 Rejected 
+                      `LN_Brent_OIL_t-3`                       `LN_Brent_OIL_t-4` 
+                               Confirmed                                 Rejected 
+                      `LN_Brent_OIL_t-5`                       `LN_Brent_OIL_t-6` 
+                                Rejected                                 Rejected 
+                            LN_SOFIX_t_1                             LN_SOFIX_t_2 
+                                Rejected                                 Rejected 
+                            LN_SOFIX_t_3                             LN_SOFIX_t_4 
+                                Rejected                                 Rejected 
+                            LN_SOFIX_t_5                             LN_SOFIX_t_6 
+                                Rejected                                 Rejected 
+                        `LN_USD_BGN_t-1`                         `LN_USD_BGN_t-2` 
+                                Rejected                                 Rejected 
+                        `LN_USD_BGN_t-3`                         `LN_USD_BGN_t-4` 
+                                Rejected                                 Rejected 
+                        `LN_USD_BGN_t-5`                         `LN_USD_BGN_t-6` 
+                                Rejected                                 Rejected 
+                            LN_SP500_t_1                             LN_SP500_t_2 
+                                Rejected                                 Rejected 
+                            LN_SP500_t_3                             LN_SP500_t_4 
+                               Confirmed                                 Rejected 
+                            LN_SP500_t_5                             LN_SP500_t_6 
+                               Tentative                                Tentative 
+          Unemployment_SD_first_diff_t_1           Unemployment_SD_first_diff_t_2 
+                               Tentative                                Tentative 
+          Unemployment_SD_first_diff_t_3           Unemployment_SD_first_diff_t_4 
+                               Tentative                                Confirmed 
+          Unemployment_SD_first_diff_t_5           Unemployment_SD_first_diff_t_6 
+                               Confirmed                                Confirmed 
+Normal_salary_increase_SD_first_diff_t_1 Normal_salary_increase_SD_first_diff_t_2 
+                                Rejected                                 Rejected 
+Normal_salary_increase_SD_first_diff_t_3 Normal_salary_increase_SD_first_diff_t_4 
+                               Confirmed                                 Rejected 
+Normal_salary_increase_SD_first_diff_t_5 Normal_salary_increase_SD_first_diff_t_6 
+                                Rejected                                 Rejected 
+                     `LN_spend_diff_t-1`                      `LN_spend_diff_t-2` 
+                               Confirmed                                Confirmed 
+                     `LN_spend_diff_t-3`                      `LN_spend_diff_t-4` 
+                               Confirmed                                Confirmed 
+                     `LN_spend_diff_t-5`                      `LN_spend_diff_t-6` 
+                               Confirmed                                Confirmed 
+             `Difference_first_diff_t-1`              `Difference_first_diff_t-2` 
+                               Tentative                                 Confirmed 
+             `Difference_first_diff_t-3`              `Difference_first_diff_t-4` 
+                                Rejected                                 Rejected 
+             `Difference_first_diff_t-5`              `Difference_first_diff_t-6` 
+                                Rejected                                 Rejected 
+    `Difference_part_GDP_first_diff_t-1`     `Difference_part_GDP_first_diff_t-2` 
+                               Tentative                                Rejected 
+    `Difference_part_GDP_first_diff_t-3`     `Difference_part_GDP_first_diff_t-4` 
+                                Rejected                                 Rejected 
+    `Difference_part_GDP_first_diff_t-5`     `Difference_part_GDP_first_diff_t-6` 
+                                Rejected                                 Rejected 
+             Bulgaria_PPI_first_diff_t_1              Bulgaria_PPI_first_diff_t_2 
+                                Rejected                                 Rejected 
+             Bulgaria_PPI_first_diff_t_3              Bulgaria_PPI_first_diff_t_4 
+                                Rejected                                Confirmed 
+             Bulgaria_PPI_first_diff_t_5              Bulgaria_PPI_first_diff_t_6 
+                               Confirmed                                 Rejected 
+Levels: Tentative Confirmed Rejected
